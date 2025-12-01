@@ -1,0 +1,15 @@
+[Unit]
+Description=Test Process Hidden
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/rootkit_project/processus
+Restart=always
+RestartSec=5
+User=root
+WorkingDirectory=/root/rootkit_project
+
+[Install]
+WantedBy=multi-user.target
+
